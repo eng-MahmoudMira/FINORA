@@ -68,22 +68,18 @@ flowchart LR
 ### Request and data flow
 
 ```mermaid
-sequenceDiagram
-  actor Analyst
-  participant Page as Customer 360 route
-  participant Service as predictionService.ts
-  participant Fixtures as mockData.ts
-  Analyst->>Page: Select synthetic customer and run review
-  Page->>Service: runCustomer360(customer)
-  Service->>Fixtures: Use selected synthetic transaction/profile
-  Service-->>Page: FraudPrediction (deterministic mock)
-  alt Above stored demonstration cutoff
-    Service-->>Page: flagged=true, churn=null, offers=null
-    Page-->>Analyst: Review alert; stop downstream flow
-  else Below stored demonstration cutoff
-    Service-->>Page: ChurnPrediction and eligible OfferPrediction
-    Page-->>Analyst: Churn band, top-three offers, unified summary
-  end
+flowchart LR
+  Analyst[Analyst] --> Page[Customer 360 route]
+  Page --> Service[predictionService.ts]
+  Service --> Fixtures[mockData.ts]
+  Service --> Gate{Fraud score reaches threshold?}
+  Gate -->|Yes| Review[Flag for review]
+  Review --> Stop[Stop churn and offers]
+  Gate -->|No| Churn[Return mock churn assessment]
+  Churn --> Offers[Rank unowned mock products]
+  Offers --> Summary[Show unified summary]
+  Evidence[Source evidence files] --> Insights[Static Model Insights]
+  FutureAPI[Future Python API] -.-> Service
 ```
 
 ## Customer 360 decision flow
