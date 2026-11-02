@@ -1,0 +1,298 @@
+{
+  "best_model": "CatBoost",
+  "products": [
+    "Personal Loan",
+    "Securities Account",
+    "CD Account",
+    "Online",
+    "CreditCard"
+  ],
+  "features": [
+    "Age",
+    "Experience",
+    "Income",
+    "Family",
+    "CCAvg",
+    "Education",
+    "Mortgage"
+  ],
+  "base_rates": {
+    "Personal Loan": 0.096,
+    "Securities Account": 0.1045,
+    "CD Account": 0.0605,
+    "Online": 0.5968,
+    "CreditCard": 0.2942
+  },
+  "all_models": {
+    "Logistic Regression": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.768,
+          "roc_auc": 0.9695
+        },
+        "Securities Account": {
+          "pr_auc": 0.1122,
+          "roc_auc": 0.5237
+        },
+        "CD Account": {
+          "pr_auc": 0.1819,
+          "roc_auc": 0.709
+        },
+        "Online": {
+          "pr_auc": 0.5939,
+          "roc_auc": 0.4902
+        },
+        "CreditCard": {
+          "pr_auc": 0.2879,
+          "roc_auc": 0.4865
+        }
+      },
+      "precision_at_1": 0.313,
+      "mean_pr_auc": 0.3888,
+      "mean_roc_auc": 0.6358
+    },
+    "KNN": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9373,
+          "roc_auc": 0.9813
+        },
+        "Securities Account": {
+          "pr_auc": 0.0999,
+          "roc_auc": 0.4804
+        },
+        "CD Account": {
+          "pr_auc": 0.1076,
+          "roc_auc": 0.6129
+        },
+        "Online": {
+          "pr_auc": 0.602,
+          "roc_auc": 0.5021
+        },
+        "CreditCard": {
+          "pr_auc": 0.2969,
+          "roc_auc": 0.5036
+        }
+      },
+      "precision_at_1": 0.58,
+      "mean_pr_auc": 0.4087,
+      "mean_roc_auc": 0.6161
+    },
+    "SVM (RBF)": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9643,
+          "roc_auc": 0.9926
+        },
+        "Securities Account": {
+          "pr_auc": 0.0889,
+          "roc_auc": 0.4543
+        },
+        "CD Account": {
+          "pr_auc": 0.1555,
+          "roc_auc": 0.6707
+        },
+        "Online": {
+          "pr_auc": 0.599,
+          "roc_auc": 0.4996
+        },
+        "CreditCard": {
+          "pr_auc": 0.3359,
+          "roc_auc": 0.5387
+        }
+      },
+      "precision_at_1": 0.623,
+      "mean_pr_auc": 0.4287,
+      "mean_roc_auc": 0.6312
+    },
+    "Decision Tree": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9361,
+          "roc_auc": 0.9758
+        },
+        "Securities Account": {
+          "pr_auc": 0.115,
+          "roc_auc": 0.5362
+        },
+        "CD Account": {
+          "pr_auc": 0.154,
+          "roc_auc": 0.6577
+        },
+        "Online": {
+          "pr_auc": 0.5863,
+          "roc_auc": 0.4742
+        },
+        "CreditCard": {
+          "pr_auc": 0.2918,
+          "roc_auc": 0.4916
+        }
+      },
+      "precision_at_1": 0.437,
+      "mean_pr_auc": 0.4166,
+      "mean_roc_auc": 0.6271
+    },
+    "Random Forest": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9929,
+          "roc_auc": 0.9991
+        },
+        "Securities Account": {
+          "pr_auc": 0.1116,
+          "roc_auc": 0.5169
+        },
+        "CD Account": {
+          "pr_auc": 0.1562,
+          "roc_auc": 0.7119
+        },
+        "Online": {
+          "pr_auc": 0.5982,
+          "roc_auc": 0.4973
+        },
+        "CreditCard": {
+          "pr_auc": 0.2898,
+          "roc_auc": 0.4858
+        }
+      },
+      "precision_at_1": 0.628,
+      "mean_pr_auc": 0.4297,
+      "mean_roc_auc": 0.6422
+    },
+    "Bagging": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9905,
+          "roc_auc": 0.9988
+        },
+        "Securities Account": {
+          "pr_auc": 0.109,
+          "roc_auc": 0.501
+        },
+        "CD Account": {
+          "pr_auc": 0.1099,
+          "roc_auc": 0.6297
+        },
+        "Online": {
+          "pr_auc": 0.6131,
+          "roc_auc": 0.5044
+        },
+        "CreditCard": {
+          "pr_auc": 0.2736,
+          "roc_auc": 0.4642
+        }
+      },
+      "precision_at_1": 0.594,
+      "mean_pr_auc": 0.4192,
+      "mean_roc_auc": 0.6196
+    },
+    "AdaBoost": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9223,
+          "roc_auc": 0.99
+        },
+        "Securities Account": {
+          "pr_auc": 0.1256,
+          "roc_auc": 0.5309
+        },
+        "CD Account": {
+          "pr_auc": 0.1743,
+          "roc_auc": 0.6914
+        },
+        "Online": {
+          "pr_auc": 0.5825,
+          "roc_auc": 0.4717
+        },
+        "CreditCard": {
+          "pr_auc": 0.2903,
+          "roc_auc": 0.4908
+        }
+      },
+      "precision_at_1": 0.597,
+      "mean_pr_auc": 0.419,
+      "mean_roc_auc": 0.635
+    },
+    "Gradient Boosting": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9883,
+          "roc_auc": 0.9985
+        },
+        "Securities Account": {
+          "pr_auc": 0.1184,
+          "roc_auc": 0.5301
+        },
+        "CD Account": {
+          "pr_auc": 0.1527,
+          "roc_auc": 0.6932
+        },
+        "Online": {
+          "pr_auc": 0.5954,
+          "roc_auc": 0.4943
+        },
+        "CreditCard": {
+          "pr_auc": 0.2878,
+          "roc_auc": 0.4886
+        }
+      },
+      "precision_at_1": 0.626,
+      "mean_pr_auc": 0.4285,
+      "mean_roc_auc": 0.6409
+    },
+    "XGBoost": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.988,
+          "roc_auc": 0.9984
+        },
+        "Securities Account": {
+          "pr_auc": 0.1103,
+          "roc_auc": 0.5106
+        },
+        "CD Account": {
+          "pr_auc": 0.1941,
+          "roc_auc": 0.6893
+        },
+        "Online": {
+          "pr_auc": 0.5926,
+          "roc_auc": 0.49
+        },
+        "CreditCard": {
+          "pr_auc": 0.2747,
+          "roc_auc": 0.4676
+        }
+      },
+      "precision_at_1": 0.631,
+      "mean_pr_auc": 0.4319,
+      "mean_roc_auc": 0.6312
+    },
+    "CatBoost": {
+      "per_product": {
+        "Personal Loan": {
+          "pr_auc": 0.9866,
+          "roc_auc": 0.9977
+        },
+        "Securities Account": {
+          "pr_auc": 0.098,
+          "roc_auc": 0.4883
+        },
+        "CD Account": {
+          "pr_auc": 0.1955,
+          "roc_auc": 0.7046
+        },
+        "Online": {
+          "pr_auc": 0.5964,
+          "roc_auc": 0.4948
+        },
+        "CreditCard": {
+          "pr_auc": 0.2964,
+          "roc_auc": 0.4878
+        }
+      },
+      "precision_at_1": 0.628,
+      "mean_pr_auc": 0.4346,
+      "mean_roc_auc": 0.6346
+    }
+  }
+}

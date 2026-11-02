@@ -1,0 +1,10 @@
+{
+  "routes": [
+    { "path": "/", "title": "Overview" },
+    { "path": "/customer-360", "title": "Customer 360" },
+    { "path": "/fraud-detection", "title": "Fraud Detection" },
+    { "path": "/customer-churn", "title": "Customer Churn" },
+    { "path": "/product-recommendations", "title": "Product Recommendations" },
+    { "path": "/model-insights", "title": "Model Insights" }
+  ]
+}
