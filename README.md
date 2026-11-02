@@ -281,6 +281,12 @@ Before that integration:
 
 There are no Python API routes or backend endpoints in this project today; the interface above is an integration direction, not an existing service contract on the network.
 
+## Presentation
+
+[Open the FINORA presentation](https://eng-MahmoudMira.github.io/FINORA/presentation/ )
+
+[View the presentation HTML source](docs/presentation/index.html)
+
 ## Contributing and licensing
 
 Keep demo records separate from presentation components, keep prediction logic behind the service boundary, and preserve the provenance/limitations next to evaluation results. Run the tests, linter and production build before proposing changes. No open-source license is included in this repository; add a license file before redistributing it under open-source terms.
